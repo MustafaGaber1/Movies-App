@@ -51,7 +51,7 @@ const App = () => {
       }
       setMovieList(data.results || []);
 
-      if (query && data.results.length > 0) {
+      if (query && data.length > 0) {
         await updateSearchCount(query, data.results[0]);
       }
     } catch (error) {
@@ -84,7 +84,7 @@ const App = () => {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src="../public/hero.png" alt="Hero Banner" />
+          <img src="/hero.png" alt="Hero Banner" />
           <h1>
             Find <span className="text-gradient">Movies</span> You'll Enjoy
             Without the Hassle
